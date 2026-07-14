@@ -418,7 +418,7 @@ body::-webkit-scrollbar {
 	justify-content: center;
 	padding: 12px 24px;
 	box-sizing: border-box;
-	gap: 4px;
+	gap: 12px;
 	min-width: 100px;
 	min-height: 40px;
 	color: #4255b4;
