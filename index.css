@@ -430,6 +430,13 @@ body::-webkit-scrollbar {
 	font-weight: 600;
 }
 
+.text-buttons .primary-button {
+	background: linear-gradient(180deg, var(--blue-primary-swastika-blue-color-55, #3B77ED) 0%, var(--blue-primary-cta-blue-color-50, #4255B4) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: inline-block;
+}
+
 .caretright {
 	height: 20px;
 	width: 20px;
