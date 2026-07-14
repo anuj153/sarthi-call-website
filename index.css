@@ -3,6 +3,16 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
+	-ms-overflow-style: none;
+	/* IE and Edge */
+	scrollbar-width: none;
+	/* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+	display: none;
 }
 
 .why-traders-choose-satvi {
@@ -17,12 +27,13 @@ body {
 	font-size: 14px;
 	color: #222326;
 	font-family: Montserrat;
-	padding-top: 56px;
 	box-sizing: border-box;
 }
 
 .component-18 {
-	width: 100%;
+	width: calc(100% + 2px);
+	margin-left: -1px;
+	margin-right: -1px;
 	height: auto;
 	display: flex;
 	flex-direction: column;
@@ -32,6 +43,7 @@ body {
 	font-family: 'Fira Sans';
 }
 
+/* LIGHT THEME HEADER (OLD ARCHIVED)
 .top-bar {
 	width: 100%;
 	display: flex;
@@ -53,6 +65,35 @@ body {
 .top-bar.scrolled {
 	border-bottom: 1px solid #dfe1e5;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+*/
+
+/* DARK THEME HEADER (NEW ACTIVE) */
+.top-bar {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 20px;
+	height: 56px;
+	box-sizing: border-box;
+	gap: 16px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background-color: transparent;
+	color: #b8bdcc;
+	border-bottom: 1px solid transparent;
+	transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.top-bar.scrolled {
+	background-color: rgba(5, 19, 31, 0.95);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border-bottom: 1px solid #102230;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .txt-icon-sarthi {
@@ -149,6 +190,7 @@ body {
 	flex-shrink: 0;
 }
 
+/* LIGHT THEME HERO CONTAINER (OLD ARCHIVED)
 .st {
 	align-self: stretch;
 	flex: 1;
@@ -165,6 +207,28 @@ body {
 	color: #222326;
 	font-family: Montserrat;
 }
+*/
+
+/* DARK THEME HERO CONTAINER (NEW ACTIVE) */
+.st {
+	align-self: stretch;
+	flex: 1;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 100px 20px 0px;
+	/* changed 44px to 100px to cover top-bar height */
+	box-sizing: border-box;
+	position: relative;
+	isolation: isolate;
+	gap: 40px;
+	text-align: center;
+	font-size: 30px;
+	color: #fff;
+	font-family: Montserrat;
+	background-color: #05131f;
+}
 
 .st-child {
 	width: 250%;
@@ -173,7 +237,7 @@ body {
 	object-fit: cover;
 	position: absolute;
 	margin: 0 !important;
-	bottom: -150px;
+	bottom: -450px;
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 0;
@@ -186,7 +250,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: 28px;
+	gap: 48px;
 	z-index: 1;
 	flex: 1;
 }
@@ -198,7 +262,7 @@ body {
 }
 
 .get-the-right {
-	font-weight: 500;
+	font-weight: 500 !important;
 	line-height: 130%;
 }
 
@@ -212,24 +276,20 @@ body {
 
 .vector-parent {
 	align-self: stretch;
+	position: relative;
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(191, 106, 217, 0.22) 50%, rgba(255, 255, 255, 0.00) 100%);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 12px;
+	gap: 8px;
 	text-align: left;
 	font-size: 11px;
+	color: #ffffff;
 	font-family: 'Fira Sans';
 }
 
-.divider-line {
-	width: 100%;
-	max-width: 250px;
-	height: auto;
-	object-fit: contain;
-}
-
 .frame-child {
-	width: 100%;
+	width: 320px;
 	height: 1px;
 	position: relative;
 	max-height: 100%;
@@ -267,13 +327,13 @@ body {
 	display: none;
 }
 
+/* LIGHT THEME STATS (OLD ARCHIVED)
 .k-traders {
 	position: relative;
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 120%;
 	font-weight: 500;
 }
-
 .use-sarthi {
 	position: relative;
 	font-size: 14px;
@@ -284,12 +344,37 @@ body {
 	text-overflow: ellipsis;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
-	margin-top: -4px;
+}
+.star-05-icon {
+	height: 16px;
+	width: 16px;
+	position: relative;
+}
+*/
+
+/* DARK THEME STATS (NEW ACTIVE) */
+.k-traders {
+	position: relative;
+	font-size: 20px;
+	line-height: 120%;
+	font-weight: 500;
+}
+
+.use-sarthi {
+	position: relative;
+	font-size: 16px;
+	line-height: 140%;
+	color: #b8bdcc;
+	display: -webkit-inline-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
 }
 
 .star-05-icon {
-	height: 12px;
-	width: 12px;
+	height: 16px;
+	width: 16px;
 	position: relative;
 }
 
@@ -302,8 +387,10 @@ body {
 	gap: 20px;
 	font-size: 16px;
 	color: #fff;
+	margin-bottom: 64px;
 }
 
+/* LIGHT THEME PRIMARY BUTTON (OLD ARCHIVED)
 .text-buttons {
 	align-self: stretch;
 	height: 48px;
@@ -317,6 +404,24 @@ body {
 	gap: 4px;
 	min-width: 100px;
 	min-height: 40px;
+}
+*/
+
+/* DARK THEME PRIMARY BUTTON (NEW ACTIVE) */
+.text-buttons {
+	align-self: stretch;
+	height: 48px;
+	border-radius: 100px;
+	background-color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px 24px;
+	box-sizing: border-box;
+	gap: 4px;
+	min-width: 100px;
+	min-height: 40px;
+	color: #4255b4;
 }
 
 .primary-button {
@@ -354,6 +459,7 @@ body {
 	max-height: 100%;
 }
 
+/* LIGHT THEME SECONDARY BUTTON (OLD ARCHIVED)
 .text-buttons2 {
 	align-self: stretch;
 	height: 48px;
@@ -369,6 +475,24 @@ body {
 	text-align: left;
 	color: #4255b4;
 }
+*/
+
+/* DARK THEME SECONDARY BUTTON (NEW ACTIVE) */
+.text-buttons2 {
+	align-self: stretch;
+	height: 48px;
+	border-radius: 100px;
+	border: 1px solid #ffffff;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px 24px;
+	min-height: 40px;
+	text-align: left;
+	color: #ffffff;
+	background-color: transparent;
+}
 
 .ios {
 	width: 298px;
@@ -379,7 +503,7 @@ body {
 	align-items: flex-start;
 	overflow: hidden;
 	flex-shrink: 0;
-	z-index: 2;
+	z-index: 3;
 	text-align: left;
 	font-size: 11.42px;
 	color: #fff;
@@ -1406,4 +1530,32 @@ body {
 	font-weight: 600;
 	line-height: 120%;
 	color: #222326;
+}
+
+/* Ambient glow and branding icons for Dark Theme Hero Section */
+.green-back {
+	width: 432px;
+	height: 364px;
+	position: absolute;
+	margin: 0 !important;
+	bottom: -80px;
+	left: calc(50% - 216px);
+	filter: blur(250px);
+	border-radius: 50%;
+	background: linear-gradient(rgba(255, 240, 193, 0.2), rgba(255, 240, 193, 0.2)), linear-gradient(270deg, #fc9453, #fe54a6 25%, #c143e8 50%, #4a65ea);
+	z-index: 0;
+	flex-shrink: 0;
+	pointer-events: none;
+}
+
+.sarthi-text-icon {
+	width: 210.5px;
+	height: 68.7px;
+	position: absolute;
+	margin: 0 !important;
+	bottom: 130px;
+	left: calc(50% - 105.25px);
+	z-index: 2;
+	flex-shrink: 0;
+	pointer-events: none;
 }
