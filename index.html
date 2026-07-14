@@ -14,16 +14,16 @@
 
 <body>
 	<div class="why-traders-choose-satvi">
-		<div class="component-18">
-			<div class="top-bar">
-				<div class="txt-icon-sarthi">
-					<img alt="Sarthi" src="./Assets/Sarthi-logo.png" style="height: 24px; width: auto;">
-				</div>
-				<div class="by">by</div>
-				<div class="swastika-logo">
-					<img alt="Swastika" src="./Assets/Swaqstika-logo.png" style="height: 24px; width: auto;">
-				</div>
+		<div class="top-bar">
+			<div class="txt-icon-sarthi">
+				<img alt="Sarthi" src="./Assets/Sarthi-logo.png" style="height: 24px; width: auto;">
 			</div>
+			<div class="by">by</div>
+			<div class="swastika-logo">
+				<img alt="Swastika" src="./Assets/Swaqstika-logo.png" style="height: 24px; width: auto;">
+			</div>
+		</div>
+		<div class="component-18">
 			<div class="st">
 				<img class="st-child" src="./Assets/Blob.png" alt="">
 				<div class="title-parent">
@@ -330,6 +330,70 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- FAQ Section -->
+		<div class="faq-section">
+			<div class="faq-title-parent">
+				<div class="faq-title">Any questions?<br>We’re here to help</div>
+			</div>
+			<div class="faq-list">
+				<div class="faq-item active">
+					<div class="faq-question">
+						<span>Is Sarthi an AI or a real advisor?</span>
+						<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+					</div>
+					<div class="faq-answer">
+						<div class="faq-answer-content">
+							<p>Your brokerage plan depends on how much money you add to your trading account (we call it your net deposit) in the first 60 days. The more you deposit, the lower your brokerage charges!</p>
+						</div>
+					</div>
+				</div>
+				<div class="faq-item">
+					<div class="faq-question">
+						<span>How is Sarthi different from other trading tools?</span>
+						<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+					</div>
+					<div class="faq-answer">
+						<div class="faq-answer-content">
+							<p>Your brokerage plan depends on how much money you add to your trading account (we call it your net deposit) in the first 60 days. The more you deposit, the lower your brokerage charges!</p>
+						</div>
+					</div>
+				</div>
+				<div class="faq-item">
+					<div class="faq-question">
+						<span>How often will Sarthi call me?</span>
+						<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+					</div>
+					<div class="faq-answer">
+						<div class="faq-answer-content">
+							<p>Your brokerage plan depends on how much money you add to your trading account (we call it your net deposit) in the first 60 days. The more you deposit, the lower your brokerage charges!</p>
+						</div>
+					</div>
+				</div>
+				<div class="faq-item">
+					<div class="faq-question">
+						<span>Can I turn off Sarthi calls or alerts?</span>
+						<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+					</div>
+					<div class="faq-answer">
+						<div class="faq-answer-content">
+							<p>Your brokerage plan depends on how much money you add to your trading account (we call it your net deposit) in the first 60 days. The more you deposit, the lower your brokerage charges!</p>
+						</div>
+					</div>
+				</div>
+				<div class="faq-item">
+					<div class="faq-question">
+						<span>What can I ask Sarthi?</span>
+						<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+					</div>
+					<div class="faq-answer">
+						<div class="faq-answer-content">
+							<p>Your brokerage plan depends on how much money you add to your trading account (we call it your net deposit) in the first 60 days. The more you deposit, the lower your brokerage charges!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!-- How It Works Overlay -->
 	<div id="how-it-works-overlay" class="overlay-backdrop">
@@ -346,7 +410,32 @@
 		</div>
 	</div>
 
+	<!-- Success/Thank You Overlay -->
+	<div id="success-overlay" class="overlay-backdrop align-bottom">
+		<div class="success-sheet">
+			<div class="success-content">
+				<div class="success-icon-container">
+					<img src="./Assets/Sarthi-Icon.png" alt="Sarthi Logo" width="80" height="80" style="object-fit: contain;">
+				</div>
+				<div class="success-title">Thanks for your interest in Sarthi!</div>
+				<div class="success-subtext">This is just a demo and your feedback will help us improve it.</div>
+				<button class="success-btn">Done</button>
+			</div>
+		</div>
+	</div>
+
 	<script>
+		// Scroll lock helpers
+		function lockScroll() {
+			document.body.style.overflow = 'hidden';
+			document.documentElement.style.overflow = 'hidden';
+		}
+
+		function unlockScroll() {
+			document.body.style.overflow = '';
+			document.documentElement.style.overflow = '';
+		}
+
 		const overlay = document.getElementById('how-it-works-overlay');
 		const triggerBtn = document.getElementById('how-it-works-btn');
 		const closeBtn = document.querySelector('.sheet-close-btn');
@@ -392,18 +481,18 @@
 		triggerBtn.addEventListener('click', () => {
 			setStep(1);
 			overlay.classList.add('active');
-			document.body.style.overflow = 'hidden';
+			lockScroll();
 		});
 
 		closeBtn.addEventListener('click', () => {
 			overlay.classList.remove('active');
-			document.body.style.overflow = '';
+			unlockScroll();
 		});
 
 		overlay.addEventListener('click', (e) => {
 			if (e.target === overlay) {
 				overlay.classList.remove('active');
-				document.body.style.overflow = '';
+				unlockScroll();
 			}
 		});
 
@@ -422,6 +511,65 @@
 				video.muted = !video.muted;
 				document.getElementById('volume-icon').innerHTML = video.muted ? volOff : volUp;
 			});
+		}
+
+		// Success bottom sheet logic
+		const successOverlay = document.getElementById('success-overlay');
+		const successBtn = document.querySelector('.success-btn');
+		const actionButtons = document.querySelectorAll('.text-buttons, .text-buttons5, .text-buttons6, .text-buttons7');
+
+		actionButtons.forEach(btn => {
+			btn.addEventListener('click', () => {
+				successOverlay.classList.add('active');
+				lockScroll();
+			});
+		});
+
+		successBtn.addEventListener('click', () => {
+			successOverlay.classList.remove('active');
+			unlockScroll();
+		});
+
+		successOverlay.addEventListener('click', (e) => {
+			if (e.target === successOverlay) {
+				successOverlay.classList.remove('active');
+				unlockScroll();
+			}
+		});
+
+		// FAQ Accordion logic
+		const faqItems = document.querySelectorAll('.faq-item');
+		faqItems.forEach(item => {
+			const question = item.querySelector('.faq-question');
+			question.addEventListener('click', () => {
+				const isActive = item.classList.contains('active');
+				
+				faqItems.forEach(otherItem => {
+					otherItem.classList.remove('active');
+				});
+				
+				if (!isActive) {
+					item.classList.add('active');
+				}
+			});
+		});
+
+		// Header scroll behavior
+		const topBar = document.querySelector('.top-bar');
+		const scrollContainer = document.querySelector('.why-traders-choose-satvi');
+		
+		const handleScroll = () => {
+			const scrollTop = window.scrollY || (scrollContainer ? scrollContainer.scrollTop : 0);
+			if (scrollTop > 0) {
+				topBar.classList.add('scrolled');
+			} else {
+				topBar.classList.remove('scrolled');
+			}
+		};
+
+		window.addEventListener('scroll', handleScroll);
+		if (scrollContainer) {
+			scrollContainer.addEventListener('scroll', handleScroll);
 		}
 	</script>
 </body>
