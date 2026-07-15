@@ -699,7 +699,19 @@
 		function trackEvent(name, params = {}) {
 			console.log(`[Clarity] Track Event: ${name}`, params);
 			if (typeof clarity === 'function') {
+				// Send standard event
 				clarity('event', name, params);
+				
+				// Also set custom tags so they show up directly under the "Custom tags" filter dropdown
+				if (name === 'cta_click' && params.button_text) {
+					clarity('set', 'cta_clicked', params.button_text);
+				}
+				if (name === 'faq_open' && params.faq_question) {
+					clarity('set', 'faq_opened', params.faq_question);
+				}
+				if (name === 'interactive_mockup_step' && params.next_step) {
+					clarity('set', 'mockup_step', String(params.next_step));
+				}
 			}
 		}
 
